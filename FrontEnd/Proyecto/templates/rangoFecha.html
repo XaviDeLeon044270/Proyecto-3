@@ -1,0 +1,87 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center min-h-screen p-6">
+    <div class="w-full max-w-2xl">
+        <!-- Título con gradiente -->
+        <h1 class="text-3xl font-bold mb-8 text-white">
+            Resumen de datos por rango de fecha
+        </h1>
+
+        <!-- Contenedor del formulario con fondo oscuro y bordes redondeados -->
+        <div class="bg-gray-900/50 rounded-lg p-8 backdrop-blur-sm border border-gray-800">
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <!-- Campo de fecha inicial -->
+                <div class="flex flex-col">
+                    <label class="flex items-center text-white mb-2 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Fecha inicial
+                    </label>
+                    <input type="text" placeholder="dd/mm/aaaa" class="bg-gray-800/50 border border-gray-700 rounded-md p-2 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+
+                <!-- Campo de fecha final -->
+                <div class="flex flex-col">
+                    <label class="flex items-center text-white mb-2 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Fecha final
+                    </label>
+                    <input type="text" placeholder="dd/mm/aaaa" class="bg-gray-800/50 border border-gray-700 rounded-md p-2 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+
+                <!-- Campo de empresa -->
+                <div class="flex flex-col">
+                    <label class="flex items-center text-white mb-2 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        Empresa
+                    </label>
+                    <select class="bg-gray-800/50 border border-gray-700 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <option>Todas las empresas</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botón de generar resumen -->
+            <button class="w-full py-3 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-200">
+                <span class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Generar Resumen
+                </span>
+            </button>
+        </div>
+
+        <!-- Título del resumen -->
+        <h2 class="text-white mt-8 text-xl">
+            Resumen de datos en la fecha seleccionada
+        </h2>
+
+        <!-- Área de texto para el resumen -->
+        <div class="flex justify-between mt-4 space-x-4">
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(211, 211, 211, 0.6);">
+                <h3 class="text-lg font-bold">Total</h3>
+                <p class="mt-2">-</p>
+            </div>
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(144, 238, 144, 0.6);">
+                <h3 class="text-lg font-bold">Positivos</h3>
+                <p class="mt-2">-</p>
+            </div>
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(255, 182, 193, 0.6);">
+                <h3 class="text-lg font-bold">Negativos</h3>
+                <p class="mt-2">-</p>
+            </div>
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(173, 216, 230, 0.6);">
+                <h3 class="text-lg font-bold">Neutros</h3>
+                <p class="mt-2">-</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

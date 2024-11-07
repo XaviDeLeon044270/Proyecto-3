@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center min-h-screen p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+        <!-- Consultar datos -->
+        <a href="{% url 'consultar' %}" class="transform hover:scale-105 transition-all duration-200 bg-blue-900 text-white rounded-lg p-6 flex flex-col items-center justify-center shadow-lg hover:bg-blue-800">
+            <div class="w-12 h-12 mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+            </div>
+            <span class="text-lg font-semibold">Consultar datos</span>
+        </a>
+
+        <!-- Ver datos por fecha -->
+        <a href="{% url 'fecha' %}" class="transform hover:scale-105 transition-all duration-200 bg-green-800 text-white rounded-lg p-6 flex flex-col items-center justify-center shadow-lg hover:bg-green-700">
+            <div class="w-12 h-12 mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <span class="text-lg font-semibold">Ver datos por fecha</span>
+        </a>
+
+        <!-- Ver datos por rango de fecha -->
+        <a href="{% url 'rangoFecha' %}" class="transform hover:scale-105 transition-all duration-200 bg-red-900 text-white rounded-lg p-6 flex flex-col items-center justify-center shadow-lg hover:bg-red-800">
+            <div class="w-12 h-12 mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <span class="text-lg font-semibold">Ver datos por rango de fecha</span>
+        </a>
+
+        {% load static %}
+        <!-- Ver reporte en PDF -->
+        <a href="{% static 'Prueba.pdf' %}" class="transform hover:scale-105 transition-all duration-200 bg-purple-900 text-white rounded-lg p-6 flex flex-col items-center justify-center shadow-lg hover:bg-purple-800">
+            <div class="w-12 h-12 mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <span class="text-lg font-semibold">Ver reporte en PDF</span>
+        </a>
+
+        <!-- Mensajes de prueba -->
+        <a href="{% url 'mensajes' %}" class="transform hover:scale-105 transition-all duration-200 bg-teal-800 text-white rounded-lg p-6 flex flex-col items-center justify-center shadow-lg hover:bg-teal-700">
+            <div class="w-12 h-12 mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+            </div>
+            <span class="text-lg font-semibold">Mensajes de prueba</span>
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<solicitud_clasificacion>
+ <diccionario> 
+    <sentimientos_positivos> 
+        <palabra>excelente</palabra>
+        <palabra>bueno</palabra>
+        <palabra>maravilloso</palabra>
+        <palabra>fantástico</palabra>
+        <palabra>increíble</palabra>
+        <palabra>asombroso</palabra>
+        <palabra>positivo</palabra>
+        <palabra>espléndido</palabra>
+        <palabra>brillante</palabra>
+        <palabra>genial</palabra>
+        <palabra>sobresaliente</palabra>
+        <palabra>impresionante</palabra>
+        <palabra>perfecto</palabra>
+        <palabra>valioso</palabra>
+        <palabra>importante</palabra>
+        <palabra>optimista</palabra>
+        <palabra>feliz</palabra>
+        <palabra>emocionante</palabra>
+        <palabra>magnífico</palabra>
+        <palabra>vibrante</palabra>
+        <palabra>hermoso</palabra>
+        <palabra>encantador</palabra>
+        <palabra>radiante</palabra>
+        <palabra>motivador</palabra>
+        <palabra>esperanzador</palabra>
+    </sentimientos_positivos>
+    <sentimientos_negativos> 
+        <palabra>malo</palabra>
+        <palabra>terrible</palabra>
+        <palabra>desagradable</palabra>
+        <palabra>desastroso</palabra>
+        <palabra>horrible</palabra>
+        <palabra>decepcionante</palabra>
+        <palabra>pésimo</palabra>
+        <palabra>lamentable</palabra>
+        <palabra>frustrante</palabra>
+        <palabra>deficiente</palabra>
+        <palabra>odioso</palabra>
+        <palabra>crítico</palabra>
+        <palabra>preocupante</palabra>
+        <palabra>insatisfactorio</palabra>
+        <palabra>desalentador</palabra>
+    </sentimientos_negativos>
+    <empresas_analizar> 
+        <empresa> 
+            <nombre> Apple </nombre>
+            <servicios>
+                <servicio nombre="DesarroLLo"> 
+                    <alias> desarrollar </alias>
+                    <alias> desarrollé </alias>
+                </servicio>     
+                <servicio nombre="GesTIón"> 
+                    <alias> gestioné </alias>
+                    <alias> geStiones </alias>
+                    <alias> Gestiones </alias>
+                </servicio>   
+            </servicios>     
+        </empresa>
+        <empresa> 
+            <nombre> Microsoft </nombre>
+            <servicios>
+                <servicio nombre="Cobrar"> 
+                    <alias> cobranDO </alias>
+                    <alias> cobRÁDO </alias>
+                    <alias> coBraroN </alias>
+                </servicio>
+            </servicios>
+        </empresa>
+        <empresa> 
+            <nombre> Google </nombre>
+            <servicios>
+                <servicio nombre="FacTURACION"> 
+                    <alias> factUrando </alias>
+                    <alias> facTurARon </alias>
+                </servicio>
+            </servicios>
+        </empresa>
+        <empresa> 
+            <nombre> Amazon </nombre>
+            <servicios>
+                <servicio nombre="DesplIegUE"> 
+                    <alias> desplegué </alias>
+                    <alias> desplego </alias>
+                    <alias> desplegaMOS </alias>
+                </servicio>
+                <servicio nombre="Subida"> 
+                    <alias> suBI </alias>
+                </servicio>
+            </servicios>
+        </empresa>
+        <empresa> 
+            <nombre> IBM </nombre>
+            <servicios>
+                <servicio nombre="lOGÍstica"> 
+                    <alias> logistica </alias>
+                </servicio>
+            </servicios>
+        </empresa>
+        <empresa> 
+            <nombre> Tesla </nombre>
+            <servicios>
+                <servicio nombre="AutomATIZACIÓN"> 
+                    <alias> automatiza </alias>
+                    <alias> automatizandO </alias>
+                </servicio>
+            </servicios>
+        </empresa>
+        <empresa> 
+            <nombre> Oracle </nombre>
+            <servicios>
+                <servicio nombre="ProtECCióN"> 
+                    <alias> pRotege </alias>
+                    <alias> proTEGIDos </alias>
+                </servicio>
+            </servicios>
+        </empresa>
+    </empresas_analizar>
+ </diccionario>
+ <lista_mensajes>
+    <mensaje>
+        Lugar y fecha: Guatemala, 
+        28/10/2024 16:33 
+        Usuario: @P3rs0n41
+        Red social: Instagram 
+        Hoy me conecté a lo que fue una llamada con un representante de MICROSOFt, y debo decir que me cobraron de más. No me parece justo, espero que se solucione pronto. Es lamentÁble y frustrante.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Austin, 29/10/2024 12:03 Usuario: pEl0n111 Red social: X Ando muy feliz porque hoy me llegó mi nuevo iPhone, la verdad es que Apple siempre me sorprende con sus productos. Lo único malo son los precios, pero vale la pena. Igualmente, sus gestiones son impresionante, pero es frustrante esperar tanto tiempo.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Guatemala, 28/10/2024 06:53 Usuario: ipc2Lover
+        Red social: Facebook IMPRESIONAnte lo que ha hecho GOOGLE con su nueva actualización, es increíble. Me imagino que facturaron mucho con esto. #WOW #SORPRENDIDÍSIMO
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Tokio, 28/10/2024 07:52 Usuario: correoTest@gmail.com Red social: Mastodon No lo sé, ibm me parece que no tiene una buena logística, no me gusta, es desalentador.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Guatemala, 
+        29/10/2024 15:27 Usuario: correoTest2@gmail.com Red social: Mastodon Tesla y la tecnología que está desarrollando es impresionante, me encanta. ¡Se encuentran automatizando robots! #Futuro
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Seattle, 29/10/2024 14:30 Usuario: amiguito1 Red social: Mastodon Amazon es PerFECto ya que subi una mi app a un bucket de S3 y fue muy rápido. #TeamAmazon
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Detroit, 29/10/2024 15:12 
+        Usuario: mail@mail.com Red social: Threads HORRIBLE de verdad cómo me facturaron con los servicios de Google, no me parece justo. Espero que se solucione pronto.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Detroit, 30/10/2024 09:10 Usuario: soyunUser Red social: X Siento que con Amazon puedo terminar mis proyectos, hemos desplegado una app que subí y ha sido muy rápido. Es magnífico.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Cincinnati, 30/10/2024 18:29 
+        Usuario: gatito123
+        Red social: Facebook Oracle dice que protege mis datos, pero no me siento seguro. No me gusta cómo lo hacen, es crítico.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Wuhan, 30/10/2024 08:08 
+        Usuario: 123WP456 Red social: Douyin IBM y su logística es hermoso, me encanta.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: Hangzhou, 31/10/2024 05:59 Usuario: Player1
+        Red social: Weibo Malo, Terrible, Desagradable, Decepcionante, Pésimo, Lamentable, Frustrante, Deficiente, Odioso, Crítico, Preocupante, Insatisfactorio, Desalentador. Así me siento con el servicio de Microsóft, no me gusta. Me han cobrado mal.
+    </mensaje>
+    <mensaje>
+        Lugar y fecha: 
+        Hangzhou, 01/11/2024 04:34 Usuario: Player2
+        Red social: Weibo ÓRACLé si protege mis datos, que bien me siento, es hermoso.
+    </mensaje>
+ </lista_mensajes>
+</solicitud_clasificacion>
+
+<!-- PRUEBA DE MENSAJE
+<?xml version="1.0"?>
+<mensaje>
+Lugar y fecha: Guatemala,
+29/10/2024 15:20 Usuario: testCali@usac.edu Red social: X Desarrollé y gestioné con APplé mi proyecto, fue increíble y asombroso, pero me han cobrado de más. Espero que se solucione pronto ya que es frustante y desalentador.
+</mensaje>
+-->

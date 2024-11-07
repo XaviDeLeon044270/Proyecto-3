@@ -1,0 +1,98 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center min-h-screen p-6">
+    <div class="w-full max-w-2xl">
+        <!-- Título con gradiente -->
+        <h1 class="text-3xl font-bold mb-8 text-white">
+            Resumen de datos por fecha
+        </h1>
+
+        <!-- Contenedor del formulario con fondo oscuro y bordes redondeados -->
+        <div class="bg-gray-900/50 rounded-lg p-8 backdrop-blur-sm border border-gray-800">
+            <form method="POST" action="{% url 'filtrar_mensajes' %}">
+                {% csrf_token %}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <!-- Campo de fecha -->
+                    <div class="flex flex-col">
+                        <label class="flex items-center text-white mb-2 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Fecha
+                        </label>
+                        <input type="date" name="fecha" class="p-2 rounded bg-gray-800 text-white border border-gray-700">
+                    </div>
+
+                    <!-- Campo de empresa -->
+                    <div class="flex flex-col">
+                        <label class="flex items-center text-white mb-2 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/>
+                            </svg>
+                            Empresa
+                        </label>
+                        <select name="empresa" class="p-2 rounded bg-gray-800 text-white border border-gray-700">
+                            <option value="">Todas las empresas</option>
+                            {% for empresa in empresas %}
+                                <option value="{{ empresa }}">{{ empresa }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-2 bg-blue-600 text-white font-bold rounded hover:bg-blue-700">
+                    Filtrar
+                </button>
+            </form>
+        </div>
+
+        <!-- Título del resumen -->
+        <h2 class="text-white mt-8 text-xl">
+            Resumen de datos en la fecha seleccionada
+        </h2>
+
+        <!-- Área de texto para el resumen -->
+        <div class="flex justify-between mt-4 space-x-4">
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(211, 211, 211, 0.6);">
+                <h3 class="text-lg font-bold">Total</h3>
+                <p class="mt-2">{{ total }}</p>
+            </div>
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(144, 238, 144, 0.6);">
+                <h3 class="text-lg font-bold">Positivos</h3>
+                <p class="mt-2">{{ positivos }}</p>
+            </div>
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(255, 182, 193, 0.6);">
+                <h3 class="text-lg font-bold">Negativos</h3>
+                <p class="mt-2">{{ negativos }}</p>
+            </div>
+            <div class="flex-1 p-6 border border-gray-800 rounded-lg text-center text-white" style="background-color: rgba(173, 216, 230, 0.6);">
+                <h3 class="text-lg font-bold">Neutros</h3>
+                <p class="mt-2">{{ neutros }}</p>
+            </div>
+        </div>
+
+        <!-- Mostrar mensajes filtrados -->
+        <div class="mt-8 w-full">
+            {% if filtered_messages %}
+                <h2 class="text-2xl font-bold mb-4 text-white">Mensajes Filtrados</h2>
+                <ul class="bg-gray-900/50 rounded-lg p-4 backdrop-blur-sm border border-gray-800">
+                    {% for msg in filtered_messages %}
+                        <li class="mb-4">
+                            <div class="text-white"><strong>Fecha:</strong> {{ msg.date }}</div>
+                            <div class="text-white"><strong>Red Social:</strong> {{ msg.social_network }}</div>
+                            <div class="text-white"><strong>Usuario:</strong> {{ msg.user }}</div>
+                            <div class="text-white"><strong>Empresas:</strong> {{ msg.companies|join:", " }}</div>
+                            <div class="text-white"><strong>Sentimiento:</strong> {{ msg.sentiment }}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% elif error %}
+                <div class="text-red-500 mt-4">{{ error }}</div>
+            {% else %}
+                <div class="text-white mt-4">No hay mensajes para mostrar.</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
